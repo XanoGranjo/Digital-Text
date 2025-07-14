@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    color: white;
+}
+ 
+ p {
+     margin: 10px;
+     font-size: 20px; 
+     line-height: calc(20px * 1.5);
+     text-align:left;
+ }
+
+ a{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 500ms;
+ }
+
+ a:hover{
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.30) inset, 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    color: rgb(255, 255, 255);
+ }
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: url(Imagens/padi-bckgrd-new_a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 60% 50%;
+}
+
+.parte1{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.titulo {
+    font-size: 30px;
+    line-height: calc(30px * 1.2);
+    text-align:center;
+}
+
+h1 span {
+    transition: font-size 0.3s ease, color 0.3s ease;
+    animation: shadowAnimation 1s infinite alternate;
+}
+
+.texto span {
+    transition: font-size 0.3s ease, color 0.3s ease,font-weight 0.4s ease;
+    animation: shadowAnimation 1s infinite alternate;
+}
+
+@keyframes shadowAnimation {
+    0% {
+        text-shadow: 0 0 5px white;
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(100, 100, 100);
+    }
+}
+
+/* Adiciona efeito de mudança de cor e tamanho ao passar o mouse sobre as spans */
+h1 span:hover {
+    font-size: 50px;
+}
+
+.texto span:hover {
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.conteudo, .conteudo2{
+    width: 100%;
+    min-width: 45vw;
+    max-width: 800px;
+    max-height: 50vh;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+}
+.conteudo{
+    display: none;
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.30) inset, 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    top:20%;
+}
+
+.conteudo2{
+    max-width: 800px;
+    padding: 0px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.313);
+    bottom:80px
+}
+
+.inicial{
+display: block;
+}
+
+.botao1, .botao2, .botao3{
+    width:120px;
+    height:50px;
+    font-size:1rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.30) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition: 500ms;
+}
+.botao2{
+    position: absolute;
+    bottom: 22%;
+    right: 45%;
+}
+
+.botao3{
+    display: none;
+    position: absolute;
+    bottom: 22%;
+    left: 5%;
+}
+
+.botao1{
+    position: absolute;
+    left:50%;
+    bottom: 10px;
+}
+
+.botao2:hover, .botao3:hover{
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.3) inset, 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.botao2:active, .botao3:active{
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.3) inset, 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.botao1:hover{
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.3) inset, 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+bottom:10px;
+height:70px;
+}
+
+footer{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.30) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0px 0px;
+    padding: 0px 50px 0px 50px;
+    transition: height 1s ease;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
+}
+
+ .fp{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.305);
+    margin: 20px;
+    width: 700px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 2px rgba(255, 255, 255, 0.3) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 700ms ease;
+}
+
+.identificacao{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    transition: 800ms ease;
+}
+
+h4{
+    width: 800px;
+}
